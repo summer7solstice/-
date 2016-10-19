@@ -1,0 +1,61 @@
+//
+//  MyPCH.pch
+//  我的微博
+//
+//  Created by Macx on 16/10/6.
+//  Copyright © 2016年 无限. All rights reserved.
+//
+
+#ifndef MyPCH_pch
+#define MyPCH_pch
+
+//-----------------------header---------------------------//
+#import "ThemeManager.h"
+#import "WeiboModel.h"
+#import "UserModel.h"
+#import "UIImageView+WebCache.h"
+#import "UIViewExt.h"
+#import "MMExampleDrawerVisualStateManager.h"
+#import "MBProgressHUD.h"
+#import "SinaWeibo+SendWeibo.h"
+
+//-------------------------宏定义---------------------------//
+//系统版本
+#define KSystemVersion ([[UIDevice currentDevice].systemVersion floatValue])
+
+//屏幕宽高
+#define KScreenWidth ([UIScreen mainScreen].bounds.size.width)
+#define KScreenHeight ([UIScreen mainScreen].bounds.size.height)
+
+//新浪微博SDK
+#import "SinaWeibo.h"
+
+
+
+//微博对象获取
+#define KSinaWeiboOBJ (((AppDelegate*)[UIApplication sharedApplication].delegate).sinaWeibo)
+
+
+//主题改变通知名
+#define KThemeChangedNotiName (@"KThemeChangedNotiName")
+
+//--------------------字体颜色名
+//more界面字体颜色
+#define KMoreItemTextColor  (@"More_Item_Text_color")
+//主页用户名字字体颜色
+#define KHomeNameLabelColor (@"Timeline_Name_color")
+//主页时间label字体颜色
+#define KHomeTimeLabelColor (@"Timeline_Time_color")
+//主页微博正文字体颜色
+#define KHomeTextLabelColor (@"Timeline_Content_color")
+//主页超链接字体颜色
+#define KHomeLink (@"Link_color")
+
+//字体大小
+//微博正文字体
+#define KWeiboTextFont ([UIFont systemFontOfSize:16])
+#define KRepostWeiboTextFont ([UIFont systemFontOfSize:14])
+
+//WXLabel行间距
+#define KLineSpace (3)
+#endif /* MyPCH_pch */
