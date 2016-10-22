@@ -34,8 +34,7 @@
             
             if ([str isEqualToString:emoticonStr]) {
                 //图片str
-//                NSLog(@"str = %@",str);
-                NSString *imgName = [dic objectForKey:@"png"];
+                NSString *imgName = [emoDic objectForKey:@"png"];
                 NSString *newStr = [NSString stringWithFormat:@"<image url = '%@'>",imgName];
                 //将原本的text中的str替换
                 weiboText = [weiboText stringByReplacingOccurrencesOfString:str withString:newStr];

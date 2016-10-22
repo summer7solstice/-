@@ -51,6 +51,8 @@
 		8F2CA2551DACFA150063241F /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F2CA2431DACFA150063241F /* UIImageView+HighlightedWebCache.m */; };
 		8F2CA2561DACFA150063241F /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F2CA2451DACFA150063241F /* UIImageView+WebCache.m */; };
 		8F2CA2571DACFA150063241F /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F2CA2471DACFA150063241F /* UIView+WebCacheOperation.m */; };
+		8F39613E1DBAFE7B00696304 /* EmoticonViews.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F39613D1DBAFE7B00696304 /* EmoticonViews.m */; };
+		8F3961411DBAFEBF00696304 /* EmoticonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3961401DBAFEBF00696304 /* EmoticonModel.m */; };
 		8F3DCC491DB1D06A00C11078 /* WeiboWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3DCC481DB1D06A00C11078 /* WeiboWebViewController.m */; };
 		8F3DCC551DB2199100C11078 /* WXCircleProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3DCC4C1DB2199100C11078 /* WXCircleProgressView.m */; };
 		8F3DCC561DB2199100C11078 /* WXPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3DCC4E1DB2199100C11078 /* WXPhoto.m */; };
@@ -66,6 +68,7 @@
 		8F8371911DB5D3A40092175B /* MMExampleDrawerVisualStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F8371901DB5D3A40092175B /* MMExampleDrawerVisualStateManager.m */; };
 		8F8371981DB5D8380092175B /* SendWeiboViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F8371971DB5D8380092175B /* SendWeiboViewController.m */; };
 		8F83719B1DB60FE10092175B /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F83719A1DB60FE10092175B /* LocationViewController.m */; };
+		8FA1F0071DBB0B6F0097C580 /* EmoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA1F0061DBB0B6F0097C580 /* EmoView.m */; };
 		8FACC8501D9D2F6B00F1D52E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FACC84F1D9D2F6B00F1D52E /* main.m */; };
 		8FACC8531D9D2F6B00F1D52E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FACC8521D9D2F6B00F1D52E /* AppDelegate.m */; };
 		8FACC85B1D9D2F6B00F1D52E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FACC85A1D9D2F6B00F1D52E /* Assets.xcassets */; };
@@ -555,6 +558,10 @@
 		8F2CA2451DACFA150063241F /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		8F2CA2461DACFA150063241F /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		8F2CA2471DACFA150063241F /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
+		8F39613C1DBAFE7B00696304 /* EmoticonViews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmoticonViews.h; sourceTree = "<group>"; };
+		8F39613D1DBAFE7B00696304 /* EmoticonViews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmoticonViews.m; sourceTree = "<group>"; };
+		8F39613F1DBAFEBF00696304 /* EmoticonModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmoticonModel.h; sourceTree = "<group>"; };
+		8F3961401DBAFEBF00696304 /* EmoticonModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmoticonModel.m; sourceTree = "<group>"; };
 		8F3DCC471DB1D06A00C11078 /* WeiboWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboWebViewController.h; sourceTree = "<group>"; };
 		8F3DCC481DB1D06A00C11078 /* WeiboWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboWebViewController.m; sourceTree = "<group>"; };
 		8F3DCC4B1DB2199100C11078 /* WXCircleProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXCircleProgressView.h; sourceTree = "<group>"; };
@@ -585,6 +592,8 @@
 		8F8371971DB5D8380092175B /* SendWeiboViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendWeiboViewController.m; sourceTree = "<group>"; };
 		8F8371991DB60FE10092175B /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
 		8F83719A1DB60FE10092175B /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
+		8FA1F0051DBB0B6F0097C580 /* EmoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmoView.h; sourceTree = "<group>"; };
+		8FA1F0061DBB0B6F0097C580 /* EmoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmoView.m; sourceTree = "<group>"; };
 		8FACC84B1D9D2F6B00F1D52E /* 我的微博.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "我的微博.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FACC84F1D9D2F6B00F1D52E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8FACC8511D9D2F6B00F1D52E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -1116,6 +1125,19 @@
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
+		8F39613B1DBAFE5B00696304 /* EmoticonViews */ = {
+			isa = PBXGroup;
+			children = (
+				8F39613C1DBAFE7B00696304 /* EmoticonViews.h */,
+				8F39613D1DBAFE7B00696304 /* EmoticonViews.m */,
+				8F39613F1DBAFEBF00696304 /* EmoticonModel.h */,
+				8F3961401DBAFEBF00696304 /* EmoticonModel.m */,
+				8FA1F0051DBB0B6F0097C580 /* EmoView.h */,
+				8FA1F0061DBB0B6F0097C580 /* EmoView.m */,
+			);
+			path = EmoticonViews;
+			sourceTree = "<group>";
+		};
 		8F3DCC4A1DB2199100C11078 /* 图片浏览 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1160,6 +1182,7 @@
 		8F8371921DB5D80F0092175B /* SendWeibo */ = {
 			isa = PBXGroup;
 			children = (
+				8F39613B1DBAFE5B00696304 /* EmoticonViews */,
 				8F8371931DB5D80F0092175B /* Controller */,
 				8F8371941DB5D80F0092175B /* Model */,
 				8F8371951DB5D80F0092175B /* View */,
@@ -2440,6 +2463,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FA1F0071DBB0B6F0097C580 /* EmoView.m in Sources */,
 				8F3EF7E31DB076D400ADD45F /* UIScrollView+PullDownRefresh.m in Sources */,
 				8F2CA20D1DAC8D750063241F /* RightViewController.m in Sources */,
 				8FC64F7C1DA6327100D6F003 /* SinaWeiboAuthorizeView.m in Sources */,
@@ -2514,7 +2538,9 @@
 				8FC64F791DA6327100D6F003 /* JSONKit.m in Sources */,
 				8F2A79051DB729DD006952A6 /* AFURLRequestSerialization.m in Sources */,
 				8F2A79021DB729DD006952A6 /* AFNetworkReachabilityManager.m in Sources */,
+				8F39613E1DBAFE7B00696304 /* EmoticonViews.m in Sources */,
 				8FE762B01DAB4357004BC320 /* ThemeSelViewController.m in Sources */,
+				8F3961411DBAFEBF00696304 /* EmoticonModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

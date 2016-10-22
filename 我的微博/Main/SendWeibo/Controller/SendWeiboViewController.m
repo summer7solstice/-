@@ -10,6 +10,8 @@
 #import "Appdelegate.h"
 #import "LocationViewController.h"
 #import "HomeViewController.h"
+#import "EmoticonViews.h"
+#import "EmoticonModel.h"
 
 #define KToolViewHeight 40
 #define KLocationViewHeight 18
@@ -26,6 +28,9 @@
     UIImageView *_locationIcon;
     ThemeLabel *_locationLabel;
     ThemeButton *_locationCancelBtn;
+    
+    //表情视图
+    EmoticonViews *_emoticonView;
 }
 @property(nonatomic,strong)NSDictionary *locationData;
 
@@ -56,6 +61,9 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardShow:) name:UIKeyboardDidShowNotification object:nil];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardHide:) name:UIKeyboardDidHideNotification object:nil];
+    
+    //监听表情通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addEmoticon:) name:KEmoNotiName object:nil];
 }
 -(void)keyboardShow:(NSNotification*)noti{
     NSValue *value = noti.userInfo[UIKeyboardFrameEndUserInfoKey];
@@ -172,7 +180,16 @@
             self.locationData = result;
         }];
         [self.navigationController pushViewController:locationVc animated:YES];
+    }else if (btn.tag == 204){
+        if (_emoticonView == nil) {
+            _emoticonView = [[EmoticonViews alloc]initWithFrame:CGRectMake(0, 0, KScreenWidth, 250)];
+            _emoticonView.backgroundColor = [UIColor clearColor];
+
+        }
+        _inputTextView.inputView = _inputTextView.inputView ? nil : _emoticonView;
         
+        [_inputTextView reloadInputViews];
+        [_inputTextView becomeFirstResponder];
     }
     
 }
@@ -209,10 +226,6 @@
         [params setObject:lat forKey:@"lat"];
         
     }
-//    [weibo requestWithURL:KSendWeiboAPI
-//                   params:params
-//               httpMethod:@"POST"
-//                 delegate:self];
     
     [weibo sendWeiboWithText:text image:nil params:params success:^(id result) {
         //成功,跳转到home 并进行刷新
@@ -241,17 +254,18 @@
         [hud hide:YES afterDelay:1];
     }];
 }
-
+-(void)addEmoticon:(NSNotification*)noti{
+    NSDictionary *userInfo = noti.userInfo;
+    EmoticonModel *model = userInfo[KEmoKey];
+    
+    NSString *emoStr = model.chs;
+    
+    
+    if (emoStr) {
+        _inputTextView.text = [_inputTextView.text stringByAppendingString:emoStr];
+    }
+}
 #pragma mark - SinaWeiboRequestDelegate
-//-(void)request:(SinaWeiboRequest *)request didReceiveResponse:(NSURLResponse *)response{
-//    NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse*)response;
-//    NSLog(@"状态码:%li",httpResponse.statusCode);
-//    
-//    if (httpResponse.statusCode == 404){
-//        UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"警告" message:@"发送失败" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
-//        [alertView show];
-//    }
-//}
 
 //set方法实时刷新数据
 -(void)setLocationData:(NSDictionary *)locationData{
@@ -275,10 +289,15 @@
     }
     
 }
+-(void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 /*
 #pragma mark - Navigation

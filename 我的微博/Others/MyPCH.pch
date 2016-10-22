@@ -58,4 +58,8 @@
 
 //WXLabel行间距
 #define KLineSpace (3)
+
+//表情信息传递
+#define KEmoNotiName (@"EmoticonNotificationName")
+#define KEmoKey (@"EmoticonKey")
 #endif /* MyPCH_pch */
